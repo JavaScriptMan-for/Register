@@ -2,7 +2,8 @@ import "./assets/style.css"
 
 import { createApp } from 'vue'
 import App from './App.vue'
-import Header from "./components/Header.vue"
+import App2 from "./components/App2.vue";
 
-createApp(App).mount('#app')
+
+        createApp(App).mount('#app')
 
