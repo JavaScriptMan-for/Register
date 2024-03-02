@@ -10,7 +10,10 @@ export default {
         }
     },
     methods: {
-     
+    pageNot() {
+    
+   }
+    
     }
 }
 </script>
@@ -23,6 +26,7 @@ export default {
     <li>Гонка - <a href="https://javascriptman-for.github.io/CarGames/ ">https://javascriptman-for.github.io/CarGames/ </a></li>
     <li>Даня и пылессос - <a href="#">Пока что разрабатывается</a></li>
 </ul>
+
 
  
 </template>
