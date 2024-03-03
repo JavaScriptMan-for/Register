@@ -12,8 +12,12 @@ export default {
     methods: {
     pageNot() {
     
-   }
-    
+   } 
+    },
+    beforeMount() {
+        if(this.name != localStorage.getItem('name') && this.surname != localStorage.getItem("surname") && this.age != localStorage.getItem("age") && this.email != localStorage.getItem("email") && this.password != localStorage.getItem("password")) {
+            localStorage.setItem("i", '1')
+        }
     }
 }
 </script>

@@ -3,17 +3,17 @@
         <Form></Form>
     </div>
     <div v-show="this.i == 2" class="comp" >
-    <App2></App2>
+    <Main></Main>
 </div>
 </template>
 <script>
 
 import "./assets/style.css"
 import Form from "./components/Form.vue";
-import App2 from "./components/App2.vue";
+import Main from "./components/Main.vue";
 export default {
     components: {
-        Form, App2
+        Form, Main
     },
     data() {
         return {
@@ -43,4 +43,4 @@ export default {
   .comp {
         width: 100%;
     }
-</style>
+</style>./components/Main.vue

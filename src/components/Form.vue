@@ -5,11 +5,14 @@
     <input  @input="surnameData($event.target.value)" type="text" placeholder="Фамилия"/> <br>
     <input  @input="ageData($event.target.value)" type="number" placeholder="Возраст"/> <br>
     <input @input="emailData($event.target.value)" type="email" placeholder="E-mail"/> <br>
+    <input @input="passData($event.target.value)" type="password" placeholder="Пароль"/> <br>
     <button 
     v-if="this.user != '' || 
     this.surname != '' ||
      this.age != '' ||
-      this.email != ''"
+      this.email != '' ||
+      this.password != ''
+      "
        @click="submit()"  
        type="button">Отправить
     </button> <br>
@@ -17,7 +20,9 @@
          v-show="this.user == '' 
          && this.surname == '' 
          && this.age == ''
-          && this.email == ''">Отправить</button>
+          && this.email == ''
+          && this.password == ''
+          ">Отправить</button>
      
      
      
@@ -37,7 +42,7 @@
 
 </template>
 <script>
-import App2 from "./App2.vue";
+import App2 from "./Main.vue";
 
 export default  {
     components: { App2 },
@@ -47,6 +52,7 @@ export default  {
             surname: "",
             age: ``,
             email: "",
+            password: "",
             i: 1,
             j: 1
 
@@ -66,8 +72,11 @@ export default  {
         emailData(val_4) {
             this.email = val_4
         },
+        passData(val_5) {
+            this.password = val_5
+        },
         submit() {
-            if(this.user == '' || this.surname == '' || this.age == "" || this.email == "") {
+            if(this.user == '' || this.surname == '' || this.age == "" || this.email == "" || this.password == "") {
                 this.i = 1
                 this.j = 1;
                 document.querySelector("#xp").showModal();
@@ -87,9 +96,11 @@ export default  {
                 localStorage.setItem("name", this.user);
                 localStorage.setItem("surname", this.surname);
                 localStorage.setItem("age", this.age);
-                localStorage.setItem("email", this.email)
+                localStorage.setItem("email", this.email);
+                localStorage.setItem("password", this.password)
           
             }
+          
         },
         Focus() {
         document.querySelector('#first').focus() 
@@ -198,3 +209,4 @@ input {
        flex-direction: column;
     }
 </style>
+./Main.vue
