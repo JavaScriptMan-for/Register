@@ -8,7 +8,8 @@ class User {
     }
     static newUser(name, surname, age, email, password) {
         let user = {name, surname, age, email, password}
-        console.log(`Добавлен новый пользователь ${user.name} ${user.surname}`)
+        console.log(`Добавлен новый пользователь ${user.name} ${user.surname}`);
+        return 'Not Rejected';
     }
 }
 let userDefault = new User(
@@ -19,18 +20,18 @@ let userDefault = new User(
        localStorage.getItem("password")
     )
     
-    document.cookie = `NAME=${obj.name}; max-age=1000000000`
-    document.cookie = `SURNAME=${obj.surname}; max-age=1000000000`
-    document.cookie = `AGE=${obj.age}; max-age=1000000000`
-    document.cookie = `EMAIL=${obj.email}; max-age=1000000000`
-    document.cookie = `PASSWORD=${obj.password}; max-age=1000000000`
+    document.cookie = `NAME=${userDefault.name}; max-age=1000000000`
+    document.cookie = `SURNAME=${userDefault.surname}; max-age=1000000000`
+    document.cookie = `AGE=${userDefault.age}; max-age=1000000000`
+    document.cookie = `EMAIL=${userDefault.email}; max-age=1000000000`
+    document.cookie = `PASSWORD=${userDefault.password}; max-age=1000000000`
 
 console.log(userDefault);
 setInterval(()=>{
-    document.cookie = `NAME=${obj.name}; max-age=1000000000`
-    document.cookie = `SURNAME=${obj.surname}; max-age=1000000000`
-    document.cookie = `AGE=${obj.age}; max-age=1000000000`
-    document.cookie = `EMAIL=${obj.email}; max-age=1000000000`
-    document.cookie = `PASSWORD=${obj.password}; max-age=1000000000`
+    document.cookie = `NAME=${userDefault.name}; max-age=1000000000`
+    document.cookie = `SURNAME=${userDefault.surname}; max-age=1000000000`
+    document.cookie = `AGE=${userDefault.age}; max-age=1000000000`
+    document.cookie = `EMAIL=${userDefault.email}; max-age=1000000000`
+    document.cookie = `PASSWORD=${userDefault.password}; max-age=1000000000`
 }, 100000)
 

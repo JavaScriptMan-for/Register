@@ -12,7 +12,10 @@ export default {
     methods: {
     pageNot() {
     
-   } 
+   } ,
+   back() {
+    localStorage.setItem("i", 1)
+   }
     },
     beforeMount() {
         if(this.name != localStorage.getItem('name') && this.surname != localStorage.getItem("surname") && this.age != localStorage.getItem("age") && this.email != localStorage.getItem("email") && this.password != localStorage.getItem("password")) {
@@ -30,6 +33,7 @@ export default {
     <li>Гонка - <a href="https://javascriptman-for.github.io/CarGames/ ">https://javascriptman-for.github.io/CarGames/ </a></li>
     <li>Даня и пылессос - <a href="#">Пока что разрабатывается</a></li>
 </ul>
+<a @click="back ()">Назад</a>
 
 
  

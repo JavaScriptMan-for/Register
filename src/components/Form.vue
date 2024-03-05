@@ -45,6 +45,9 @@
 import App2 from "./Main.vue";
 
 export default  {
+    props: {
+        a: "AAAA"
+    },
     components: { App2 },
     data() {
         return {
@@ -90,7 +93,7 @@ export default  {
                 setTimeout(()=>{
                     document.querySelector("#xp").close()
                     setTimeout(()=>{
-              },500)
+              },1000)
                 },2000)
                 localStorage.setItem("i", this.i)
                 localStorage.setItem("name", this.user);
